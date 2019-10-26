@@ -1,0 +1,15 @@
+{
+  "moduleName": "KMT.ModuleStarterKit",
+  "modulePath": "./KMT.ModuleStarterKit",
+  "importsFolders": [
+    "Classes",
+    "Includes",
+    "Private",
+    "Public"
+  ],
+  "outputFolder": "Output",
+  "codeCoveragePercent": 0.0,
+  "pesterTags": [
+    "Build"
+  ]
+}

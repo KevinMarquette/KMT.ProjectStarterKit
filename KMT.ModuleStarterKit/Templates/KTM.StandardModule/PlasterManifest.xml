@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plasterManifest schemaVersion="1.0" 
+  xmlns="http://www.microsoft.com/schemas/PowerShell/Plaster/v1">
+  <metadata>
+    <name>KTM.StandardModule</name>
+    <id>35044074-eae6-4ee8-b437-516e5d9f9985</id>
+    <version>0.1.0</version>
+    <title>KTM Standard Module</title>
+    <description></description>
+    <author>Kevin Marquette</author>
+    <tags></tags>
+  </metadata>
+  <parameters>
+    <parameter name="ModuleName" type="text" prompt="Name of your module" default="${PLASTER_DestinationName}"/>
+    <parameter name="ModuleDesc" type="text" prompt="Brief description on this module" default="${PLASTER_ModuleName}"/>
+    <parameter name="GitHubRepo" type="text" prompt="Github repo name for this module" default="${PLASTER_PARAM_ModuleName}"/>
+    <parameter name="GitHubUserName" type="user-fullname" prompt="GitHub username" default="${PLASTER_PARAM_FullName}"/>
+    <parameter name="FullName" type="text" prompt="Module author's' name" default="${PLASTER_PARAM_GitHubUserName}"/>
+  </parameters>
+  <content>
+    <message>      Creating folder structure    </message>
+    <file source='' destination='.vscode'/>
+    <file source='' destination='Tests'/>
+    <file source='' destination='${PLASTER_PARAM_ModuleName}\Classes'/>
+    <file source='' destination='${PLASTER_PARAM_ModuleName}\Imports'/>
+    <file source='' destination='${PLASTER_PARAM_ModuleName}\Private'/>
+    <file source='' destination='${PLASTER_PARAM_ModuleName}\Public'/>
+    <message>      Deploying files    </message>
+    <file source='build.ps1' destination=''/>
+    <file source='.gitignore' destination=''/>
+	  <file source='PSScriptAnalyzerSettings.psd1' destination=''/>
+    <file source='.vscode\settings.json' destination=''/>
+    <templateFile source='readme.md' destination=''/>
+    <templateFile source='LICENSE' destination=''/>
+    <file source='Module\Module.psm1' destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}.psm1'/>
+    <templateFile source='Module\Module.psd1' destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}.psd1'/>  
+  </content>
+</plasterManifest>
