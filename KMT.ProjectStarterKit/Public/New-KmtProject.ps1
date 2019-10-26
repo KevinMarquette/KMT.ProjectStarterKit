@@ -1,11 +1,11 @@
-function New-KmtModule
+function New-KmtProject
 {
     <#
         .Synopsis
-        Creates a new module
+        Creates a new PowerShell Project
 
         .Example
-        New-KMTModule -Name MyModule
+        New-KmtProject -Name MyProject
 
         .Notes
         
