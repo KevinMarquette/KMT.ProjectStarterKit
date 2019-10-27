@@ -2,7 +2,7 @@
 <plasterManifest schemaVersion="1.0" 
   xmlns="http://www.microsoft.com/schemas/PowerShell/Plaster/v1">
   <metadata>
-    <name>KTM.StandardModule</name>
+    <name>KTMStandardModule</name>
     <id>35044074-eae6-4ee8-b437-516e5d9f9985</id>
     <version>0.1.0</version>
     <title>KTM Standard Module</title>
@@ -12,10 +12,6 @@
   </metadata>
   <parameters>
     <parameter name="ModuleName" type="text" prompt="Name of your module" default="${PLASTER_DestinationName}"/>
-    <parameter name="ModuleDesc" type="text" prompt="Brief description on this module" default="${PLASTER_ModuleName}"/>
-    <parameter name="GitHubRepo" type="text" prompt="Github repo name for this module" default="${PLASTER_PARAM_ModuleName}"/>
-    <parameter name="GitHubUserName" type="user-fullname" prompt="GitHub username" default="${PLASTER_PARAM_FullName}"/>
-    <parameter name="FullName" type="text" prompt="Module author's' name" default="${PLASTER_PARAM_GitHubUserName}"/>
   </parameters>
   <content>
     <message>      Creating folder structure    </message>
