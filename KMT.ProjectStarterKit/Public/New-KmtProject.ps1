@@ -8,7 +8,7 @@ function New-KmtProject
         New-KmtProject -Name MyProject
 
         .Notes
-        
+
     #>
     [cmdletbinding(SupportsShouldProcess)]
     param(
@@ -17,10 +17,23 @@ function New-KmtProject
         [string]
         $Path,
 
-        # Name of module
+        # Name of the project
+        [Alias('ProjectName')]
         [Parameter(Mandatory, Position = 0, ValueFromPipelineByPropertyName)]
         [string]
-        $Name
+        $Name,
+
+        [Parameter(Mandatory, ValueFromPipelineByPropertyName)]
+        [string]
+        $Author,
+
+        [Parameter(ValueFromPipelineByPropertyName)]
+        [string]
+        $Company = '',
+
+        [Parameter(ValueFromPipelineByPropertyName)]
+        [string]
+        $Description = 'A new PowerShell project'
     )
 
     process
@@ -28,16 +41,16 @@ function New-KmtProject
         try
         {
             $plaster = @{
-                TemplatePath = "$PSModuleRoot\Templates\KTM.StandardModule"
-                NoLogo = $true
-                ModuleName = $Name
-            }
-            if($PSBoundParameters.Path)
-            {
-                $plaster['DestinationPath'] = $Path
+                TemplatePath    = "$PSModuleRoot\Templates\KTM.StandardModule"
+                NoLogo          = $true
+                ModuleName      = $Name
+                Author          = $Author
+                Company         = $Company
+                Description     = $Description
+                DestinationPath = $Path
             }
 
-            if($PSCmdlet.ShouldProcess($path))
+            if ($PSCmdlet.ShouldProcess($path))
             {
                 Invoke-Plaster @plaster
             }

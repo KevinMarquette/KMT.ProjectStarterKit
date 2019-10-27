@@ -16,6 +16,8 @@
     //-------- PowerShell configuration --------
     "powershell.codeFormatting.alignPropertyValuePairs": true,
     "powershell.codeFormatting.useCorrectCasing": true,
+    "powershell.codeFormatting.pipelineIndentationStyle": "IncreaseIndentationForFirstPipeline",
+    "powershell.codeFormatting.preset": "Allman",
     "powershell.scriptAnalysis.settingsPath": "./ScriptAnalyzerSettings.psd1",
 
     //-------- Language configuration --------

@@ -4,14 +4,17 @@
   <metadata>
     <name>KTMStandardModule</name>
     <id>35044074-eae6-4ee8-b437-516e5d9f9985</id>
-    <version>0.1.0</version>
+    <version>0.2.0</version>
     <title>KTM Standard Module</title>
     <description></description>
     <author>Kevin Marquette</author>
-    <tags></tags>
+    <tags>Module</tags>
   </metadata>
   <parameters>
-    <parameter name="ModuleName" type="text" prompt="Name of your module" default="${PLASTER_DestinationName}"/>
+    <parameter name="ModuleName" type="text" prompt="Module Name" default="${PLASTER_DestinationName}"/>
+    <parameter name="Author" type="text" prompt="Author Name" default="${PLASTER_DestinationName}"/>
+    <parameter name="Company" type="text" prompt="Company Name" default="${PLASTER_DestinationName}"/>
+    <parameter name="Description" type="text" prompt="Description" default="${PLASTER_DestinationName}"/>
   </parameters>
   <content>
     <message>      Creating folder structure    </message>

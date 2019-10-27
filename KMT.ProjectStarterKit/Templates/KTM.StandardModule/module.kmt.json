@@ -1,6 +1,6 @@
 {
-  "moduleName": "KMT.ProjectstarterKit",
-  "modulePath": "./KMT.ProjectstarterKit",
+  "moduleName": "<%= $PLASTER_PARAM_ModuleName %>",
+  "modulePath": "./<%= $PLASTER_PARAM_ModuleName %>",
   "importsFolders": [
     "Classes",
     "Includes",

@@ -1,4 +1,6 @@
-## New Project
+## <%= $PLASTER_PARAM_ModuleName %>
+
+<%= $PLASTER_PARAM_Description %>
 
 This is a new project that was built with the `KMT.ProjectStarterKit` PowerShell module. Consider this an experimental work in progress and this readme will get updated when there is more to share.
 
