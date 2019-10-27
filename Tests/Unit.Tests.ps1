@@ -7,6 +7,6 @@ Describe 'Unit Tests' -Tag Build {
     }
 
     It 'New-KmtProject should create a new module'  {
-        New-KmtProject -Path ($pwd) -Name TestModule
+        New-KmtProject -Path ($pwd) -Name TestModule -Author TestAuthor
     }
 }

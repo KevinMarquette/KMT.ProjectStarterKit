@@ -13,7 +13,8 @@ Creates a new PowerShell Project
 ## SYNTAX
 
 ```
-New-KmtProject -Path <String> [-Name] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+New-KmtProject -Path <String> [-Name] <String> -Author <String> [-Company <String>] [-Description <String>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,13 +29,58 @@ New-KmtProject -Name MyProject
 
 ## PARAMETERS
 
+### -Author
+{{ Fill Author Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Company
+{{ Fill Company Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Description
+{{ Fill Description Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: A new PowerShell project
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Name
 Name of module
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: ProjectName
 
 Required: True
 Position: 1
