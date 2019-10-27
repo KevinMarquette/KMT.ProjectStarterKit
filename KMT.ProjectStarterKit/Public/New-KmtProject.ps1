@@ -10,7 +10,7 @@ function New-KmtProject
         .Notes
         
     #>
-    [cmdletbinding()]
+    [cmdletbinding(SupportsShouldProcess)]
     param(
         # Root location of the module project
         [Parameter(Mandatory, ValueFromPipelineByPropertyName)]
@@ -27,17 +27,24 @@ function New-KmtProject
     {
         try
         {
-            New-Item -Path $Path -ItemType Directory -ErrorAction Ignore
-            Copy-Item -Path $PSModuleRoot\Templates\KTM.StandardModule\* -Destination $Path -Recurse
+            $plaster = @{
+                TemplatePath = "$PSModuleRoot\Templates\KTM.StandardModule"
+                NoLogo = $true
+                ModuleName = $Name
+            }
+            if($PSBoundParameters.Path)
+            {
+                $plaster['DestinationPath'] = $Path
+            }
+
+            if($PSCmdlet.ShouldProcess($path))
+            {
+                Invoke-Plaster @plaster
+            }
         }
         catch
         {
             $PSCmdlet.ThrowTerminatingError( $PSItem )
         }
-    }
-
-    end
-    {
-
     }
 }
