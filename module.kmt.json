@@ -1,7 +1,7 @@
 {
-  "moduleName": "KMT.ModuleStarterKit",
-  "modulePath": "./KMT.ModuleStarterKit",
-  "importsFolders": [
+  "moduleName": "KMT.ProjectStarterKit",
+  "modulePath": "./KMT.ProjectStarterKit",
+  "folders": [
     "Classes",
     "Includes",
     "Private",
