@@ -7,9 +7,9 @@ if(Test-Path $PSScriptRoot\Imports)
 if( -not (Get-Module KMT.ModuleBuilder -ListAvailable))
 {
     "Installing module [KMT.ModuleBuilder]"
-    $module = Find-Module KMT.ModuleBuilder | 
+    $module = Find-Module KMT.ModuleBuilder -AllowPrerelease |
         Select-Object -First 1
-    
+
     $module | Install-Module -Scope CurrentUser
 }
 
