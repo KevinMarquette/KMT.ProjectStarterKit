@@ -10,7 +10,7 @@ if( -not (Get-Module KMT.ModuleBuilder -ListAvailable))
     $module = Find-Module KMT.ModuleBuilder -AllowPrerelease |
         Select-Object -First 1
 
-    $module | Install-Module -Scope CurrentUser
+    $module | Install-Module -Scope CurrentUser -Force -AllowClobber -SkipPublisherCheck -AcceptLicense
 }
 
 "Building module at [$PSScriptRoot]"
